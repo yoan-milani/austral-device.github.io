@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Résultats de la Recommandation</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <header>
         <figure>
-            <img src="{{ url_for('static', filename='img/Austral Solar.jpg') }}" alt="Logo Austral Groupe Energie" id="logo">
+            <img src="static/img/Austral Solar.jpg" alt="Logo Austral Groupe Energie" id="logo">
             <figcaption>Austral Groupe Energie</figcaption>
         </figure>
         <h1>Résultats de la recommandation pour panneaux photovoltaïques</h1>
@@ -18,11 +18,11 @@
 
     <main>
         <div class="result">
-            <p class="recommendation-text">{{ recommendation }}</p>
+            <p class="recommendation-text">Votre recommandation apparaîtra ici.</p>
         </div>
 
         <div class="back-button">
-            <a href="{{ url_for('index') }}">Retour à la page d'accueil</a>
+            <a href="index.html">Retour à la page d'accueil</a>
         </div>
     </main>
 </body>
