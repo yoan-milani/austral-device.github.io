@@ -1,0 +1,139 @@
+/* Style général du corps */
+body {
+    background-image: linear-gradient(to bottom, #F0C300, #FFFFFF); /* Dégradé jaune-blanc */
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;  /* Police standard */
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo */
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 150px; /* Ajustez la taille selon vos besoins */
+    height: 150px; /* Ajustez la taille selon vos besoins */
+    background-size: cover;
+}
+
+/* Header */
+header {
+    background-color: #000; /* Fond noir pour le header */
+    color: #FFF; /* Texte blanc */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style du formulaire */
+form {
+    margin-top: 50px; /* Espacement après le header */
+    text-align: center;
+    padding: 20px;
+    background-color: white;  /* Fond blanc pour le formulaire */
+    border-radius: 10px;  /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    width: 80%;
+    max-width: 500px;  /* Largeur maximale du formulaire */
+    margin: 50px auto;  /* Centrer le formulaire */
+}
+
+/* Labels dans le formulaire */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;  /* Couleur plus foncée pour le texte des étiquettes */
+}
+
+/* Champs de saisie */
+input[type="number"] {
+    padding: 12px;
+    width: 80%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9; /* Fond clair pour les champs de saisie */
+    transition: all 0.3s ease;  /* Effet de transition */
+}
+
+input[type="number"]:focus {
+    border-color: #F0C300;  /* Bordure jaune lors du focus */
+    background-color: #fff;  /* Changement de fond lors du focus */
+    outline: none;  /* Supprimer la bordure par défaut du focus */
+}
+
+/* Bouton de soumission */
+button[type="submit"] {
+    padding: 12px 25px;
+    background-color: #F0C300; /* Jaune ambre */
+    color: #000;
+    font-size: 16px;  /* Taille du texte plus grande */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition fluide */
+}
+
+button[type="submit"]:hover {
+    background-color: #F5A900; /* Couleur légèrement plus foncée au survol */
+}
+
+/* Section des résultats */
+.result {
+    margin: 30px auto;
+    padding: 30px; /* Augmenter le padding pour plus d'espace */
+    background-color: #fff;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texte de la recommandation */
+.recommendation-text {
+    font-size: 17px; /* Augmenter la taille de police */
+    color: #333;
+    text-align: justify; /* Justifier le texte pour une meilleure lisibilité */
+    font-weight: normal; /* Réduire le gras pour une meilleure lecture */
+    line-height: 1.5; /* Espacer les lignes pour plus de confort */
+}
+
+/* Bouton de retour */
+.back-button {
+    margin-top: 30px; /* Augmenter l'espace avant le bouton */
+    text-align: center;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #000;
+    background-color: #F0C300;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: #F5A900;  /* Couleur plus foncée au survol */
+    transform: translateY(-3px);  /* Légère animation au survol */
+}
+
+/* Media Queries pour les petits écrans */
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%;  /* Le formulaire occupe une plus grande largeur sur les petits écrans */
+    }
+
+    input[type="number"] {
+        width: 90%;  /* Champs de saisie plus larges */
+    }
+
+    button[type="submit"], .back-button a {
+        width: 100%;  /* Boutons plus larges pour les écrans mobiles */
+        padding: 15px;  /* Augmenter la taille pour plus de confort */
+    }
+}
