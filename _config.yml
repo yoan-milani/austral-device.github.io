@@ -1,0 +1,11 @@
+title: Australe-device
+description: >- 
+  Choisissez votre centrale solaire adaptée à vos besoins. #australsolar #australgroupeenergie
+baseurl: "" # ne pas inclure la barre oblique à la fin
+url: "https://yoan-milani.github.io/austral-device.github.io/"
+theme: jekyll-theme-primer
+exclude:
+  - "assets/"
+sass:
+  sass_dir: "_sass"
+  style: compressed
