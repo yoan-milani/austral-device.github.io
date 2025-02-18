@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résultats de la Recommandation</title>
+    <title>Recommandation Panneaux Photovoltaïques</title>
     <link rel="stylesheet" href="static/style.css">
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const nbOccupants = document.getElementById('nb_occupants').value;
+            const surface = document.getElementById('surface').value;
+            const budget = document.getElementById('budget').value;
+
+            const recommendationText = `
+                Nombre d'occupants : ${nbOccupants}<br>
+                Surface disponible : ${surface} m²<br>
+                Budget disponible : ${budget} €
+            `;
+
+            document.querySelector('.recommendation-text').innerHTML = recommendationText;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -12,26 +29,26 @@
             <img src="static/img/Austral Solar.jpg" alt="Logo Austral Groupe Énergie" id="logo">
             <figcaption>Austral Groupe Énergie</figcaption>
         </figure>
-        <h1>Résultats de la recommandation pour panneaux photovoltaïques</h1>
+        <h1>Calculatrice de recommandation pour panneaux photovoltaïques</h1>
         <h2>Austral Solar Réunion</h2>
     </header>
 
     <main>
+        <form onsubmit="handleFormSubmit(event)">
+            <label for="nb_occupants">Nombre d'occupants :</label>
+            <input type="number" id="nb_occupants" name="nb_occupants" required><br><br>
+
+            <label for="surface">Surface disponible (en m²) :</label>
+            <input type="number" id="surface" name="surface" required><br><br>
+
+            <label for="budget">Budget disponible (en €) :</label>
+            <input type="number" id="budget" name="budget" required><br><br>
+
+            <button type="submit">Obtenir la recommandation</button>
+        </form>
+
         <div class="result">
-            <p class="recommendation-text">
-                <?php
-                    // Exemple de code PHP pour traiter les données du formulaire
-                    $nb_occupants = $_POST['nb_occupants'];
-                    $surface = $_POST['surface'];
-                    $budget = $_POST['budget'];
-
-                    echo "Nombre d'occupants : " . htmlspecialchars($nb_occupants) . "<br>";
-                    echo "Surface disponible : " . htmlspecialchars($surface) . " m²<br>";
-                    echo "Budget disponible : " . htmlspecialchars($budget) . " €<br>";
-
-                    // Logique supplémentaire pour les recommandations ici
-                ?>
-            </p>
+            <p class="recommendation-text">Votre recommandation apparaîtra ici.</p>
         </div>
 
         <div class="back-button">
