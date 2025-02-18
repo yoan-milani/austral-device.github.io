@@ -18,7 +18,20 @@
 
     <main>
         <div class="result">
-            <p class="recommendation-text">Votre recommandation apparaîtra ici.</p>
+            <p class="recommendation-text">
+                <?php
+                    // Exemple de code PHP pour traiter les données du formulaire
+                    $nb_occupants = $_POST['nb_occupants'];
+                    $surface = $_POST['surface'];
+                    $budget = $_POST['budget'];
+
+                    echo "Nombre d'occupants : " . htmlspecialchars($nb_occupants) . "<br>";
+                    echo "Surface disponible : " . htmlspecialchars($surface) . " m²<br>";
+                    echo "Budget disponible : " . htmlspecialchars($budget) . " €<br>";
+
+                    // Logique supplémentaire pour les recommandations ici
+                ?>
+            </p>
         </div>
 
         <div class="back-button">
